@@ -1,0 +1,118 @@
+/* 1. Page & Background Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Add your One Piece background image URL here */
+    background-image: url('https://static.wikia.nocookie.net/onepiece/images/8/87/One_Piece_Anime_Logo.png/revision/latest?cb=20250813015436'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* Darkens the background so white text is readable */
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 2. Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. Card Styling */
+.card {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* The Transition for Hover Effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 4. Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+/* 5. Image & Text Formatting */
+.card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin: 10px 0 5px;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin: 0 0 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+    text-align: center;
+}
+/* Glassmorphism Card Style */
+.card {
+    /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.2); 
+    /* The blur effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    color: white; /* Text color inside the glass card */
+}
+
+/* Hover Effect for Glassmorphism */
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.3); /* Slightly more opaque on hover */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Update text color inside glass cards for better readability */
+.card h2, .card h3, .card p {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+#fruit-grid {
+    color: white; /* Change this to whatever color you want */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 50px;
+}

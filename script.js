@@ -10,13 +10,13 @@ async function fetchFruits() {
         
         const fruits = await response.json();
         
-        grid.innerHTML = ''; // Clear loading message
+        grid.innerHTML = ''; 
         
         fruits.forEach(fruit => {
             const card = document.createElement('div');
             card.className = 'card';
             
-            // Logic: If filename exists, create an <img> tag. Otherwise, skip it.
+           
             const imageHtml = fruit.filename 
                 ? `<img src="${fruit.filename}" alt="${fruit.name}" onerror="this.style.display='none'">` 
                 : `<p><em>No image available</em></p>`;
